@@ -204,16 +204,10 @@ export default function App() {
           keyboardType="numeric"
           style={styles.input}
         />
-        <Picker
-          selectedValue={mCourse}
-          onValueChange={(itemValue: string) => setMCourse(itemValue)}
-          style={styles.picker}
-        >
           <Picker.Item label="Courses" value="" />
           {courseList.map((item) => (
             <Picker.Item label={item.name} value={item.name} key={item.id} />
           ))}
-        </Picker>
         <TouchableHighlight onPress={handleSaveMenuItem} style={styles.smallButton}>
           <Text style={styles.buttonText}>SAVE ITEM</Text>
         </TouchableHighlight>
